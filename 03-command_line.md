@@ -13,6 +13,7 @@ Here's a list of items with which you should be familiar:
 * creating a directory
 * deleting a directory
 * creating a file using `touch` command
+
 * deleting a file
 * renaming a file
 * listing hidden files
@@ -20,7 +21,23 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+* show current working directory path: pwd
+* creating a directory: mkdir <directory name>
+* deleting a directory: rm -r <directory name>
+* creating a file using `touch` command: touch <filename>
+* deleting a file: rm <filename>
+* renaming a file: mv <old filename> <new filename>
+* listing hidden files: ls -a
+* copying a file from one directory to another: cp <filename> <directory>
+* count how many lines a text file has: wc -l <filename>
+* count how many words a text file has: wc -w <filename>
+* look at the first 10 lines of a text file: head <filename>
+* merge or concatenate content of files together: cat <filename1> <filename2>
+
+
+
+
 
 ---
 
@@ -35,7 +52,15 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+
+`ls`: lists all files and directories in the working directory
+`ls -a`: lists all files and directories in the working directory, including hidden files
+`ls -l`: display the long listing of files and directories in the working directory
+`ls -lh`: display the long listing (including file sizes and date of mod)  of files and directories in the working directory in human readable format
+`ls -lah` display the long listing (including file sizes and date of mod) of files and directories in the working directory, including hidden ones, in human readable format
+`ls -t`: display all files and directories in the working directory in order of time modified.
+`ls -Glp`display the long listing of files and directories in the working directory while omitting group names and appending indicators to directories.
 
 ---
 
@@ -43,7 +68,12 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+ls -m: displays the names as a comma-separated list
+ls -r: displays files in revers order
+ls -R: displays subdirectories as well
+ls -u: displays files by the file access time
+ls -1: displays each entry on a line
 
 ---
 
@@ -51,7 +81,11 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > xargs is used to build and execute commands from standard input. It converts input from standard input into arguments to a command.
 
- 
+For example, you can pipe the standard output of the echo command as standard input to another command:
+
+# touch file.txt
+is the same as
+# echo file.txt | xargs touch
 
